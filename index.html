@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>sudoku solver</h1>
+
+    <div class="sudoku-grid-cont">
+
+        <div class="input-grid">
+            <h2>input grid</h2>
+            <input autocomplete="off" maxlength="1" class=" top left" type="text" /><input autocomplete="off" maxlength="1" class=" top" type="text" /><input autocomplete="off" maxlength="1" class=" top" type="text" /><input autocomplete="off" maxlength="1" class=" top left" type="text" /><input autocomplete="off" maxlength="1" class=" top" type="text" /><input autocomplete="off" maxlength="1" class=" top" type="text" /><input autocomplete="off" maxlength="1" class=" top left" type="text" /><input autocomplete="off" maxlength="1" class=" top" type="text" /><input autocomplete="off" maxlength="1" class=" right top" type="text" /><br />
+            <input autocomplete="off" maxlength="1" class=" left" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" class=" left" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" class=" left" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" class=" right" type="text" /><br />
+            <input autocomplete="off" maxlength="1" class=" left" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" class=" left" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" class=" left" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" class=" right" type="text" /><br />
+            <input autocomplete="off" maxlength="1" class=" top left" type="text" /><input autocomplete="off" maxlength="1" class=" top" type="text" /><input autocomplete="off" maxlength="1" class=" top" type="text" /><input autocomplete="off" maxlength="1" class=" top left" type="text" /><input autocomplete="off" maxlength="1" class=" top" type="text" /><input autocomplete="off" maxlength="1" class=" top" type="text" /><input autocomplete="off" maxlength="1" class=" top left" type="text" /><input autocomplete="off" maxlength="1" class=" top" type="text" /><input autocomplete="off" maxlength="1" class=" right top" type="text" /><br />
+            <input autocomplete="off" maxlength="1" class=" left" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" class=" left" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" class=" left" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" class=" right" type="text" /><br />
+            <input autocomplete="off" maxlength="1" class=" left" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" class=" left" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" class=" left" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" class=" right" type="text" /><br />
+            <input autocomplete="off" maxlength="1" class=" top left" type="text" /><input autocomplete="off" maxlength="1" class=" top" type="text" /><input autocomplete="off" maxlength="1" class=" top" type="text" /><input autocomplete="off" maxlength="1" class=" top left" type="text" /><input autocomplete="off" maxlength="1" class=" top" type="text" /><input autocomplete="off" maxlength="1" class=" top" type="text" /><input autocomplete="off" maxlength="1" class=" top left" type="text" /><input autocomplete="off" maxlength="1" class=" top" type="text" /><input autocomplete="off" maxlength="1" class=" right top" type="text" /><br />
+            <input autocomplete="off" maxlength="1" class=" left" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" class=" left" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" class=" left" type="text" /><input autocomplete="off" maxlength="1" type="text" /><input autocomplete="off" maxlength="1" class=" right" type="text" /><br />
+            <input autocomplete="off" maxlength="1" class=" bottom left" type="text" /><input autocomplete="off" maxlength="1" class=" bottom" type="text" /><input autocomplete="off" maxlength="1" class=" bottom" type="text" /><input autocomplete="off" maxlength="1" class=" bottom left" type="text" /><input autocomplete="off" maxlength="1" class=" bottom" type="text" /><input autocomplete="off" maxlength="1" class=" bottom" type="text" /><input autocomplete="off" maxlength="1" class=" bottom left" type="text" /><input autocomplete="off" maxlength="1" class=" bottom" type="text" /><input autocomplete="off" maxlength="1" class=" bottom right" type="text" /><br />
+        </div>
+
+        <div class="output-grid">
+            <h2>sudoku output</h2>
+            <!-- <div class="top left" ></div><div class="top"></div> -->
+            <input readonly class=" top left" type="text" /><input readonly class=" top" type="text" /><input readonly class=" top" type="text" /><input readonly class=" top left" type="text" /><input readonly class=" top" type="text" /><input readonly class=" top" type="text" /><input readonly class=" top left" type="text" /><input readonly class=" top" type="text" /><input readonly class=" right top" type="text" /><br />
+            <input readonly class=" left" type="text" /><input readonly type="text" /><input readonly type="text" /><input readonly class=" left" type="text" /><input readonly type="text" /><input readonly type="text" /><input readonly class=" left" type="text" /><input readonly type="text" /><input readonly class=" right" type="text" /><br />
+            <input readonly class=" left" type="text" /><input readonly type="text" /><input readonly type="text" /><input readonly class=" left" type="text" /><input readonly type="text" /><input readonly type="text" /><input readonly class=" left" type="text" /><input readonly type="text" /><input readonly class=" right" type="text" /><br />
+            <input readonly class=" top left" type="text" /><input readonly class=" top" type="text" /><input readonly class=" top" type="text" /><input readonly class=" top left" type="text" /><input readonly class=" top" type="text" /><input readonly class=" top" type="text" /><input readonly class=" top left" type="text" /><input readonly class=" top" type="text" /><input readonly class=" right top" type="text" /><br />
+            <input readonly class=" left" type="text" /><input readonly type="text" /><input readonly type="text" /><input readonly class=" left" type="text" /><input readonly type="text" /><input readonly type="text" /><input readonly class=" left" type="text" /><input readonly type="text" /><input readonly class=" right" type="text" /><br />
+            <input readonly class=" left" type="text" /><input readonly type="text" /><input readonly type="text" /><input readonly class=" left" type="text" /><input readonly type="text" /><input readonly type="text" /><input readonly class=" left" type="text" /><input readonly type="text" /><input readonly class=" right" type="text" /><br />
+            <input readonly class=" top left" type="text" /><input readonly class=" top" type="text" /><input readonly class=" top" type="text" /><input readonly class=" top left" type="text" /><input readonly class=" top" type="text" /><input readonly class=" top" type="text" /><input readonly class=" top left" type="text" /><input readonly class=" top" type="text" /><input readonly class=" right top" type="text" /><br />
+            <input readonly class=" left" type="text" /><input readonly type="text" /><input readonly type="text" /><input readonly class=" left" type="text" /><input readonly type="text" /><input readonly type="text" /><input readonly class=" left" type="text" /><input readonly type="text" /><input readonly class=" right" type="text" /><br />
+            <input readonly class=" bottom left" type="text" /><input readonly class=" bottom" type="text" /><input readonly class=" bottom" type="text" /><input readonly class=" bottom left" type="text" /><input readonly class=" bottom" type="text" /><input readonly class=" bottom" type="text" /><input readonly class=" bottom left" type="text" /><input readonly class=" bottom" type="text" /><input readonly class=" bottom right" type="text" /><br />
+        </div>
+        
+    </div>
+
+    <div class="button-cont">
+        <button type="submit" onclick="solveSudoku();">Solve Sudoku</button>
+        <button type="submit" onclick="resetSudoku();">Reset</button>
+    </div>
+
+    <!-- Linking Javascript file -->
+    <script src="index.js"></script>
+</body>
+</html>

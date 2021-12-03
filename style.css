@@ -1,0 +1,89 @@
+/* .board-cont input {
+    height: 25px;
+    width: 25px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.row {
+    float: left;
+    clear: both;
+} */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f5faff;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 30px 0 80px;
+}
+
+.sudoku-grid-cont {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    font-family:'Times New Roman', Times, serif;
+}
+
+input[type=text] {
+    border: 1px dotted #000;
+    height: 32px;
+    width: 32px;
+    font-size: 20px;
+    text-align: center;
+}
+.top {
+    border-top: 2px solid #000!important;
+}
+.left {
+    border-left: 2px solid #000!important;
+}
+.bottom {
+    border-bottom: 2px solid #000!important;
+}
+.right {
+    border-right: 2px solid #000!important;
+}
+
+.button-cont {
+    display: flex;
+    justify-content: center;
+}
+button{
+    height: 3rem;
+    width: 7rem;
+    padding: 3px;
+    font-size: 1rem;
+    background-color:transparent;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+    margin: 70px 20px;
+}
+
+@media(max-width: 768px){
+    .sudoku-grid-cont {
+        flex-direction: column;
+        align-items:center;
+    }
+
+    .input-grid {
+        margin-bottom: 100px;
+    }
+}
+
+
