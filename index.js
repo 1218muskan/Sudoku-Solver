@@ -16,7 +16,6 @@ function resetSudoku(){
 }
 
 function solveSudoku(){
-    console.log(board);
     for(var i=0; i<81; i++)
     {
         var row= Math.floor(i/9);
@@ -48,8 +47,6 @@ function isCorrect(){
 
             if(board[i][j]!=''){
 
-                console.log(i,j);
-                console.log(board[i][j])
                 if(!isSafe(i , j , board[i][j])){
 
                     console.log(isSafe(i , j , board[i][j]));
@@ -130,10 +127,14 @@ function isSafe(row, col, num){
 }
 
 function display(){
-    for(var i=0; i<81; i++){
+    for(var i=0; i<9; i++){
         for(var j=0 ; j<9 ; j++){
 
             var index = 9*i + j;
+            if(sudokuCell[index].value!=""){
+                ouputSudoku[index].style.color = "red";
+            }
+
             ouputSudoku[index].value = board[i][j];
         }
     }
